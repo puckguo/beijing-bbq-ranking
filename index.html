@@ -135,11 +135,28 @@
             background: #f8f9fa;
         }
         
-        .screenshot-container img {
+        .screenshot-wrapper {
+            position: relative;
             width: 100%;
-            max-width: 100%;
+            max-height: 500px;
+            overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-wrapper img {
+            width: 100%;
+            display: block;
+        }
+        
+        .screenshot-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(transparent, #f8f9fa);
+            pointer-events: none;
         }
         
         .restaurant-info {
@@ -266,7 +283,9 @@
                 </div>
             </div>
             <div class="screenshot-container">
-                <img src="dahuaishu.jpg" alt="大槐树烤肉馆详情页">
+                <div class="screenshot-wrapper">
+                    <img src="dahuaishu.jpg" alt="大槐树烤肉馆详情页">
+                </div>
             </div>
             <div class="restaurant-info">
                 <div class="info-grid">
@@ -317,7 +336,9 @@
                 </div>
             </div>
             <div class="screenshot-container">
-                <img src="kaorouliu.jpg" alt="烤肉刘详情页">
+                <div class="screenshot-wrapper">
+                    <img src="kaorouliu.jpg" alt="烤肉刘详情页">
+                </div>
             </div>
             <div class="restaurant-info">
                 <div class="info-grid">
@@ -368,7 +389,9 @@
                 </div>
             </div>
             <div class="screenshot-container">
-                <img src="liuridu.jpg" alt="六日都烤牛内脏详情页">
+                <div class="screenshot-wrapper">
+                    <img src="liuridu.jpg" alt="六日都烤牛内脏详情页">
+                </div>
             </div>
             <div class="restaurant-info">
                 <div class="info-grid">
